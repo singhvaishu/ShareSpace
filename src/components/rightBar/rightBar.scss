@@ -1,0 +1,165 @@
+// @import "../../style.scss";
+
+// .rightBar {
+//   @include themify($themes) {
+//     flex: 3;
+//     position: sticky;
+//     top: 70px;
+//     height: calc(100vh - 70px);
+//     overflow: scroll;
+//     background-color: themed("bgSoft");
+//     border-radius: 20px;
+    
+//     color: themed("textColor");
+   
+
+//     @include mobile{
+//       display: none;
+//     }
+//     @include tablet{
+//       display: none;
+//     }
+
+//     &::-webkit-scrollbar {
+//       display: none;
+//     }
+
+//     .container {
+//       padding: 20px;
+     
+
+//       .item {
+//         -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+//         -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+//         box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+//         padding: 40px;
+//         margin-bottom: 20px;
+//         background-color: aqua;
+//         text-align: center;
+//         border-radius: 20px;
+
+//         span {
+//           color: gray;
+         
+//         }
+
+@import "../../style.scss";
+
+.rightBar {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
+    border-radius: 10px;
+    color: themed("textColor");
+
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      padding: 20px;
+
+      .item {
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        padding: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 15px;
+
+      //   span {
+      //     color: gray;
+      //     font-weight: 300;
+      //     font-size: 20px;
+
+      //   }
+      &:nth-child(1) {
+        background-color: aqua; /* Aqua background color for "Suggestions For You" */
+      }
+      span.artistText {
+        color: darkColor; // Replace with the actual dark color you want
+        font-weight: bold; // Make it bold if needed
+        text-align: left;
+        margin-right: 20px; // Add a gap to the right
+        margin-bottom: 20px
+    }
+
+    span.photographerText {
+        color: lightColor; // Replace with the actual light color you want
+        font-weight: normal; // You can omit this line or set it as needed
+        margin-bottom: 20px;
+        text-align: left;
+    }
+       }
+      
+      /* Style for the "Image Cards" section */
+      .imageCardContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        .imageCard {
+          width: calc(60% - 10px);
+          margin-bottom: 20px;
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+          color: white;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          opacity: 1;
+
+          .userInfo {
+         
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          
+
+          opacity: 1;
+
+            .imageSquare {
+             
+              margin-right: 30px;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #FFFFFF;
+            border-radius: 10px;
+              img {
+                
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            div {
+              display: flex;
+              flex-direction: column;
+              span {
+                font-weight: 300;
+                font-size: 16px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
